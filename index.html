@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>covid-19</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <div class="container">
-            <select @change="getData()" name="" id="" v-model="country">
-                <option value="">-select country-</option>
-                <option v-for="(CountryList, index) in countryList" :key="index" :value="CountryList">
-                    {{CountryList}}
-                </option>
-            </select>
-            <div class="panel">
-                <div class="case">
-                    <h3>cases</h3>
-                    <h4>{{cases}}</h4>
-                </div>
+      <div class="container">
+        <select @change="getData()" name="" id="" v-model="country">
+          <option value="">-select country-</option>
+          <option
+            v-for="(CountryList, index) in countryList"
+            :key="index"
+            :value="CountryList"
+          >
+            {{CountryList}}
+          </option>
+        </select>
+        <div class="panel">
+          <div class="case">
+            <h3>cases</h3>
+            <h4>{{cases}}</h4>
+          </div>
 
-                <div class="death">
-                    <h3>death</h3>
-                    <h4>{{death}}</h4>
-                </div>
+          <div class="death">
+            <h3>death</h3>
+            <h4>{{death}}</h4>
+          </div>
 
-                <div class="recovered">
-                    <h3>recovered</h3>
-                    <h4>{{recovered}}</h4>
-                </div>
-            </div>
+          <div class="recovered">
+            <h3>recovered</h3>
+            <h4>{{recovered}}</h4>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
